@@ -32,3 +32,16 @@ describe('blinkyDancer', function() {
     });
   });
 });
+
+describe('new dancers', function() {
+
+  var awkwardDancer, batmanDancer, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    awkwardDancer = new AwkwardDancer(10, 20, timeBetweenSteps);
+  });
+
+  expect(awkwardDancer.$node).to.be.a('function');
+});

@@ -25,3 +25,24 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.awkward{
+  border:10px solid cyan;
+  border-radius:10px;
+  animation: 3s ease-in 1s 2 reverse;
+}
+
+/* @keyframes slidein {
+  from {
+    size: 300%;
+  }
+
+  to {
+    size: 100%;
+  }
+} */
+
+.batman{
+  border:10px solid black;
+  border-radius:10px;
+  position:absolute;
+}
