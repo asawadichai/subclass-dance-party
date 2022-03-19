@@ -33,61 +33,92 @@ describe('blinkyDancer', function() {
   });
 });
 
-// describe('spidermanDancer', function() {
+describe('spidermanDancer', function() {
 
-//   var spidermanDancer, clock;
-//   var timeBetweenSteps = 100;
+  var spidermanDancer, clock;
+  var timeBetweenSteps = 100;
 
-//   beforeEach(function() {
-//     clock = sinon.useFakeTimers();
-//     spidermanDancer = new SpidermanDancer(10, 20, timeBetweenSteps);
-//   });
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    spidermanDancer = new SpidermanDancer(10, 20, timeBetweenSteps);
+  });
 
-//   it('should have a jQuery $node object', function() {
-//     expect(spidermanDancer.$node).to.be.an.instanceof(jQuery);
-//   });
+  it('should have a jQuery $node object', function() {
+    expect(spidermanDancer.$node).to.be.an.instanceof(jQuery);
+  });
 
-//   describe('dance', function() {
-//     it('should call step at least once per second', function() {
-//       sinon.spy(spidermanDancer, 'step');
-//       expect(spidermanDancer.step.callCount).to.be.equal(0);
-//       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
-//       clock.tick(timeBetweenSteps);
+  describe('dance', function() {
+    it('should call step at least once per second', function() {
+      sinon.spy(spidermanDancer, 'step');
+      expect(spidermanDancer.step.callCount).to.be.equal(0);
+      clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
+      clock.tick(timeBetweenSteps);
 
-//       expect(spidermanDancer.step.callCount).to.be.equal(1);
+      expect(spidermanDancer.step.callCount).to.be.equal(1);
 
-//       clock.tick(timeBetweenSteps);
-//       expect(spidermanDancer.step.callCount).to.be.equal(2);
-//     });
+      clock.tick(timeBetweenSteps);
+      expect(spidermanDancer.step.callCount).to.be.equal(2);
+    });
 
-// });
+  });
+});
 
-// describe('batmanDancer', function() {
+describe('batmanDancer', function() {
 
-//   var batmanDancer, clock;
-//   var timeBetweenSteps = 100;
+  var batmanDancer, clock;
+  var timeBetweenSteps = 100;
 
-//   beforeEach(function() {
-//     clock = sinon.useFakeTimers();
-//     batmanDancer = new BatmanDancer(10, 20, timeBetweenSteps);
-//   });
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    batmanDancer = new BatmanDancer(10, 20, timeBetweenSteps);
+  });
 
-//   it('should have a jQuery $node object', function() {
-//     expect(batmanDancer.$node).to.be.an.instanceof(jQuery);
-//   });
+  it('should have a jQuery $node object', function() {
+    expect(batmanDancer.$node).to.be.an.instanceof(jQuery);
+  });
 
-//   describe('dance', function() {
-//     it('should call step at least once per second', function() {
-//       sinon.spy(batmanDancer, 'step');
-//       expect(batmanDancer.step.callCount).to.be.equal(0);
-//       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
-//       clock.tick(timeBetweenSteps);
+  describe('dance', function() {
+    it('should call step at least once per second', function() {
+      sinon.spy(batmanDancer, 'step');
+      expect(batmanDancer.step.callCount).to.be.equal(0);
+      clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
+      clock.tick(timeBetweenSteps);
 
-//       expect(batmanDancer.step.callCount).to.be.equal(1);
+      expect(batmanDancer.step.callCount).to.be.equal(1);
 
-//       clock.tick(timeBetweenSteps);
-//       expect(batmanDancer.step.callCount).to.be.equal(2);
-//     });
-//   });
+      clock.tick(timeBetweenSteps);
+      expect(batmanDancer.step.callCount).to.be.equal(2);
+    });
+  });
 
-// });
+});
+
+describe('batsignalDancer', function() {
+
+  var batsignalDancer, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    batsignalDancer = new BatSignalDancer(10, 20, timeBetweenSteps);
+  });
+
+  it('should have a jQuery $node object', function() {
+    expect(batsignalDancer.$node).to.be.an.instanceof(jQuery);
+  });
+
+  describe('dance', function() {
+    it('should call step at least once per second', function() {
+      sinon.spy(batsignalDancer, 'step');
+      expect(batsignalDancer.step.callCount).to.be.equal(0);
+      clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
+      clock.tick(timeBetweenSteps);
+
+      expect(batsignalDancer.step.callCount).to.be.equal(1);
+
+      clock.tick(timeBetweenSteps);
+      expect(batsignalDancer.step.callCount).to.be.equal(2);
+    });
+  });
+
+});
