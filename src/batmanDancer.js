@@ -12,5 +12,9 @@ BatmanDancer.prototype.step = function() {
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.toggle();
+  // this.$node.toggle();
+};
+
+BatmanDancer.prototype.lineUp = function() {
+  $('.batman').css({top: 100, position: 'absolute'});
 };

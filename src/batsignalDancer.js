@@ -1,12 +1,12 @@
-var SpidermanDancer = function(top, left, timeBetweenSteps) {
+var BatSignalDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node.addClass('spiderman');
+  this.$node.addClass('batsignal');
 };
 
-SpidermanDancer.prototype = Object.create(Dancer.prototype);
-SpidermanDancer.prototype.constructor = SpidermanDancer;
+BatSignalDancer.prototype = Object.create(Dancer.prototype);
+BatSignalDancer.prototype.constructor = BatSignalDancer;
 
-SpidermanDancer.prototype.step = function() {
+BatSignalDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
   Dancer.prototype.step.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
@@ -15,6 +15,6 @@ SpidermanDancer.prototype.step = function() {
   // this.$node.toggle();
 };
 
-SpidermanDancer.prototype.lineUp = function() {
-  $('.spiderman').css({top: 600, position: 'absolute'});
+BatSignalDancer.prototype.lineUp = function() {
+
 };

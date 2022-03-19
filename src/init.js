@@ -29,6 +29,18 @@ $(document).ready(function() {
     );
 
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
+    console.log('window dancers', window.dancers);
   });
+
+  $('.lineUpDancerButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp();
+    }
+  });
+
+  // mouse interaction
+
+
 });
 
