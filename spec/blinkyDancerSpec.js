@@ -61,18 +61,8 @@ describe('spidermanDancer', function() {
     });
 
     it('should return spiderman class', function() {
-      console.log('spiderman', spidermanDancer.$node[0]);
-      console.log('spiderman $node keys: ', Object.keys(spidermanDancer.$node));
-      console.log('spiderman classlist type', Array.from(spidermanDancer.$node[0].classList));
       expect(Array.from(spidermanDancer.$node[0].classList).includes('spiderman')).to.be.true;
     });
-
-    // it('should append to window.dancers array', function() {
-
-    //   expect()
-    // })
-
-
   });
 });
 
@@ -104,6 +94,10 @@ describe('batmanDancer', function() {
     });
   });
 
+  it('should return batman class', function() {
+    expect(Array.from(batmanDancer.$node[0].classList).includes('batman')).to.be.true;
+  });
+
 });
 
 describe('batsignalDancer', function() {
@@ -132,6 +126,10 @@ describe('batsignalDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(batsignalDancer.step.callCount).to.be.equal(2);
     });
+  });
+
+  it('should return batsignal class', function() {
+    expect(Array.from(batsignalDancer.$node[0].classList).includes('batsignal')).to.be.true;
   });
 
 });
