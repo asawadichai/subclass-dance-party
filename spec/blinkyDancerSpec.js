@@ -60,12 +60,17 @@ describe('spidermanDancer', function() {
       expect(spidermanDancer.step.callCount).to.be.equal(2);
     });
 
-    it('should have spiderman interact with batman', function() {
-      console.log(spidermanDancer[0].interact);
-      expect(spidermanDancer[0].interact);
+    it('should return spiderman class', function() {
+      console.log('spiderman', spidermanDancer.$node[0]);
+      console.log('spiderman $node keys: ', Object.keys(spidermanDancer.$node));
+      console.log('spiderman classlist type', Array.from(spidermanDancer.$node[0].classList));
+      expect(Array.from(spidermanDancer.$node[0].classList).includes('spiderman')).to.be.true;
     });
 
+    // it('should append to window.dancers array', function() {
 
+    //   expect()
+    // })
 
 
   });
