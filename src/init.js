@@ -37,10 +37,19 @@ $(document).ready(function() {
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].lineUp();
     }
+    for (var j = 0; j < window.dancers.length; j++) {
+      window.dancers[j].interact();
+    }
   });
 
   // mouse interaction
+  $('body').on('mouseover', '.dancer', function(event) {
+    $(this).css({ 'animation-play-state': 'paused'});
+  });
 
+  $('body').on('mouseleave', '.dancer', function(event) {
+    $(this).css({ 'animation-play-state': 'running'});
+  });
 
 });
 

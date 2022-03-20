@@ -60,6 +60,14 @@ describe('spidermanDancer', function() {
       expect(spidermanDancer.step.callCount).to.be.equal(2);
     });
 
+    it('should have spiderman interact with batman', function() {
+      console.log(spidermanDancer[0].interact);
+      expect(spidermanDancer[0].interact);
+    });
+
+
+
+
   });
 });
 

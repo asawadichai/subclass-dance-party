@@ -16,5 +16,12 @@ BatmanDancer.prototype.step = function() {
 };
 
 BatmanDancer.prototype.lineUp = function() {
-  $('.batman').css({top: 100, position: 'absolute'});
+  $('.batman').css({top: '10%', position: 'absolute'});
+};
+
+BatmanDancer.prototype.interact = function() {
+  $('.batman').css({animation: 'none'});
+  setTimeout(function() {
+    $('.batman').css({animation: 'batmanAnimation 5s infinite alternate'});
+  }, 1);
 };

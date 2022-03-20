@@ -16,5 +16,31 @@ SpidermanDancer.prototype.step = function() {
 };
 
 SpidermanDancer.prototype.lineUp = function() {
-  $('.spiderman').css({top: 600, position: 'absolute'});
+  $('.spiderman').css({top: '90%', position: 'absolute'});
 };
+
+SpidermanDancer.prototype.interact = function() {
+  var xDistance = function(batmanLeft, spidermanLeft) {
+    return Math.abs(batmanLeft - spidermanLeft);
+  };
+  var closestBatman;
+  var closestBatmanDistance = 9999999;
+  for (var i = 0; i < window.dancers.length; i++) {
+    if (window.dancers[i] instanceof BatmanDancer) {
+      var distance = xDistance(window.dancers[i].left, this.left);
+      if (distance < closestBatmanDistance) {
+        closestBatmanDistance = distance;
+        closestBatman = window.dancers[i];
+      }
+    }
+  }
+  this.setPosition('90%', closestBatman.left);
+  $('.spiderman').css({animation: 'none'});
+  setTimeout(function() {
+    $('.spiderman').css({animation: 'spidermanAnimation 5s infinite alternate'});
+  }, 1);
+};
+
+// Pythagorean theorem
+// c^2 = a^2 + b^
+// c = Math.sqrt((this.top * this.top) + (this.left * this.left))

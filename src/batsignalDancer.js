@@ -15,6 +15,11 @@ BatSignalDancer.prototype.step = function() {
   // this.$node.toggle();
 };
 
+//empty methods
 BatSignalDancer.prototype.lineUp = function() {
 
+};
+
+BatSignalDancer.prototype.interact = function() {
+  console.log('signal interact');
 };
